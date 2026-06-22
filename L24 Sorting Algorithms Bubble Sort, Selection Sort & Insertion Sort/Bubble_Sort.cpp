@@ -2,9 +2,9 @@
 #include <vector>
 using namespace std;
 
-void bubbleSort(vector<int> &arr, int n)
+void bubbleSort(vector<int> &arr)
 {
-    int temp, swapCount = 0;
+    int n = arr.size(), swapCount = 0;
     for (int i = 0; i < n - 1; i++)
     {
         bool swapped = false; // Reset the flag at the start of every new pass
@@ -13,9 +13,7 @@ void bubbleSort(vector<int> &arr, int n)
         {
             if (arr[j] > arr[j + 1])
             {
-                temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
+                swap(arr[j],arr[j+1]);
                 swapCount++;
 
                 swapped = true;
@@ -39,11 +37,11 @@ void bubbleSort(vector<int> &arr, int n)
 int main()
 {
     vector<int> arr = {1, 9, 2, 8, 3};
-    int n = arr.size();
+    
     int temp;
     int swapCount = 0;
 
-    bubbleSort(arr, n);
+    bubbleSort(arr);
 
     return 0;
 }
