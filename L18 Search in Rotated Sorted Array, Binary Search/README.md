@@ -7,7 +7,7 @@ The algorithm must run in $O(\log N)$ time complexity, which means strict Binary
 
 ---
 
-## The Thinking Process & Engineering Architecture
+## The Thinking Process 
 
 ### 1. Why Standard Binary Search Fails
 A standard Binary Search assumes a single, unbroken ascending line. In a rotated array, the data is broken into two separate ascending blocks (e.g., `[4, 5, 6, 7]` and `[0, 1, 2, 3]`). If you blindly move left or right based strictly on the midpoint's value, you will bypass the target because the numbers reset at the pivot.
@@ -74,3 +74,4 @@ int main() {
     cout << "Target Index: " << BinarySearch(arr, tar) << endl;
     return 0;
 }
+V

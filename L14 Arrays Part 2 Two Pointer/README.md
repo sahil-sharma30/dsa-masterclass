@@ -15,8 +15,3 @@ The **Two-Pointer Approach** is an algorithmic technique used to drastically red
 * **Logic:** Start with the maximum possible width (one pointer at index `0`, one at the `last` index). Calculate the area. To find a potentially larger area, always move the pointer that points to the **shorter** line inward.
 * **Time Complexity:** $O(N)$ — We traverse the array exactly once.
 * **Space Complexity:** $O(1)$ — We only use a few integer variables (`left`, `right`, `maxWater`).
-
-## ⚠️ The Engineering Viva Trap
-**Examiner Question:** *"Why do you specifically move the pointer of the shorter line? Why not the taller line?"*
-
-**Your Answer:** *"Because the total area is strictly bottlenecked by the shorter line. If I move the taller line inward, the width decreases, and the height can NEVER get taller than my current short line. The area is guaranteed to shrink. Moving the shorter line is the only mathematical chance of finding a taller boundary to offset the loss of width."*

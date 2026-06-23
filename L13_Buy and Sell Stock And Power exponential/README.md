@@ -26,11 +26,3 @@ Calculating $x^n$ using a standard `for` loop takes $O(N)$ time. If the power is
 
 * **Time Complexity:** $O(\log N)$ 
 * **Space Complexity:** $O(1)$
-
-### ⚠️ The Engineering Viva Traps
-
-**Examiner Question 1:** *"Why did you use a `long long` for the power instead of a standard `int`?"*
-> **Your Answer:** *"To prevent an Integer Overflow. The lowest possible negative integer in C++ is `-2,147,483,648`. If the system passes that as the power, and I try to flip it to positive using `-n`, it exceeds the maximum positive integer limit (`2,147,483,647`) and crashes. `long long` gives me the 64-bit architecture needed to safely hold the flipped number."*
-
-**Examiner Question 2:** *"Why is this $O(\log N)$?"*
-> **Your Answer:** *"Because the `while` loop doesn't run $N$ times. It only runs for the exact number of bits required to write $N$ in binary. A number like 1,000,000 only takes about 20 bits in binary, meaning our loop only takes 20 steps to calculate $x^{1000000}$."*
